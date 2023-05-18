@@ -26,13 +26,11 @@ const Results = ()=> {
             setError("word not found");
             console.error(error);
         }
-
     }
     return(
         <Wrapper>
             <div className='dictionnn'>
                 <h1>DICTIONARY ON THE GO</h1>
-
                 <form action='' onSubmit={handleSubmit}>
                     <input type="text"
                     placeholder='Enter Your Word Here'
@@ -44,7 +42,6 @@ const Results = ()=> {
                 {
                     error && (<p>{error}</p>)
                 }
-
                 <div>
                     <div>
                         {
@@ -60,36 +57,20 @@ const Results = ()=> {
                                                     <p id='box2'>{definition.synonyms}</p>
                                                     <p id='box2' >{definition.antonyms}</p>
                                                     <p id='box2'>{definition.example}</p>
-
                                                 </div>
                                             ))
-
                                         }
-
-
-
-
                                     </div>
                                 ))
                               ))  
-
                             )
                         }
                     </div>   
                 </div>
             </div>
-
             </Wrapper>
         )
-        }
-
-
-
-
-
-
-
- 
+}
 const Wrapper = styled.div`
 min-height: 100vh;
 background-color:grey;
