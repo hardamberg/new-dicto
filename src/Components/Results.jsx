@@ -9,7 +9,7 @@ const Results = ()=> {
     const [word, setWord] = useState("");
     const [error, setError] = useState("")
 
-    const handleSubmit = async(e) => {
+    const handleSubmit = async(e) => { 
         e.preventDefault();
 
         if (!word) {
@@ -22,6 +22,7 @@ const Results = ()=> {
  
             const response = await axios.get(base_url);
             setDiction(response.data)
+            
         } catch(error){
             setError("word not found");
             console.error(error);
@@ -39,6 +40,7 @@ const Results = ()=> {
                     id='' />
                     <button id='btn' type="submit">submit</button>
                 </form> 
+                
                 {
                     error && (<p>{error}</p>)
                 }
@@ -67,6 +69,8 @@ const Results = ()=> {
                         }
                     </div>   
                 </div>
+
+                
             </div>
             </Wrapper>
         )

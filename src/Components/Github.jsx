@@ -71,5 +71,7 @@ const Github = () => {
     </Wrapper>
   )
 }
-
+const Wrapper = styled.section`
+    
+`
 export default Github;
